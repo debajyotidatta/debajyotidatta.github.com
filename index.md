@@ -43,7 +43,8 @@ The post list.
 
 
 
-Do not visit my [old website](http://datta-profile.appspot.com/). I was a kid when I made it and has too many rendering issues. Was extremely lazy to fix them and decided to use Jekyll and Hooligan instead. Jekyll
+Do not visit my [old website](http://datta-profile.appspot.com/). Some mistakes you make as a kid and regret it for your life. This is one of them... well the other is the long string of numbers in my gmail address.
+Was extremely lazy to fix my website javascript issues and decided to use Jekyll and Hooligan instead. Jekyll
 because it is fairly simple to use and Hooligan because the name is pretty cool.
 
 
