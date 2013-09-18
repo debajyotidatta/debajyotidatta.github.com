@@ -11,12 +11,8 @@ Complete usage and documentation available at: [Jekyll Bootstrap](http://jekyllb
 
 ## How it all started
 
-In `_config.yml` remember to specify your own data:
-    
-    Sometime in my first year I received a mail in my gmail about three online courses! Machine Learning, HCI and Databases. Quickly found out that as part of the course we all will be taught about
-    Databases. Registered for the other two courses of Andrew Ng and Scott Klemer! Two of the world's best teachers possibly (Well along with Walter Lewin, he is always in every list of best teachers!)
-    totally convinced me about the awesomeness of these two fields.
-
+    ml-class.org
+    hci-class.org
 
 The theme should reference these variables whenever needed.
     
