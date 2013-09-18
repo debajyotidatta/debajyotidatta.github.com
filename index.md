@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Some dirty fieldwork lessons that might help others!!
-tagline: Place for a tagline
+title: Experiences with HCI and ML
+tagline: and about everything else...
 ---
 {% include JB/setup %}
 
@@ -19,16 +19,21 @@ Through some online courses
     
     Currently I am a research assistant at the CNRS lab with the greta team synthesizing laughter as part of the ILHAIRE project. 
 
-The theme should reference these variables whenever needed.
+
     
-## Sample Posts
+## Some other stuff I have done...
 
-This blog contains sample posts which help stage pages and blog data.
-When you don't need the samples anymore just delete the `_posts/core-samples` folder.
+I was a Google Summer of Code Intern in 2012 for Connexions, Rice University on the "Donate Now Campaign" Here is a blog post after the [final evaluations](http://blog.cnx.org/2012/08/google-summer-of-code-2012-comes-to.html).
+I was also the part of Team Plan-B at the CIMA GBC 2012. We were the western zone finalists and also won the best business report at the Western Zone finals.
+    
 
-    $ rm -rf _posts/core-samples
+## Some things I wanted to do, but didn't quite work out
 
-Here's a sample "posts list".
+This list is fairly big and this is mainly about some ideas I had and I wanted to implement a quick prototype of the same.
+In most cases I abondoned these projects because I had no way of doing subjective evaluations. And without evaluations these projects are pretty useless.
+I will occasionally write about them in separate blog posts and if you have any ideas about reviving them feel free to email me.
+
+The "posts list".
 
 <ul class="posts">
   {% for post in site.posts %}
@@ -38,7 +43,5 @@ Here's a sample "posts list".
 
 ## To-Do
 
-This theme is still unfinished. If you'd like to be added as a contributor, [please fork](http://github.com/plusjade/jekyll-bootstrap)!
-We need to clean up the themes, make theme usage guides with theme-specific markup examples.
-
+Nothing.
 
