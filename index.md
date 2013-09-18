@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Hello World!
-tagline: Supporting tagline
+title: Some dirty fieldwork lessons that might help others!!
+tagline: Just about HCI and ML though!
 ---
 {% include JB/setup %}
 
