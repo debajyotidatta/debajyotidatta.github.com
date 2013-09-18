@@ -29,11 +29,11 @@ This blog is mostly about the stuff I have done and learnt in the last 3 years!
 ## I would love to hear from you!
 
 Actually about anything you want to talk about or share!
-Well you can send me a mail here at `datta24421112 at gmail dot com` but in case you like Mr. Zuckerbergs mode of communication more, reach me out at `/debajyotid' 
+Well you can send me a mail here at `datta24421112 @ ( gmail ) . com` 
 
+    $ rm -rf _posts/core-samples
 
-
-The post list.
+Here's a sample "posts list".
 
 <ul class="posts">
   {% for post in site.posts %}
@@ -41,12 +41,9 @@ The post list.
   {% endfor %}
 </ul>
 
+## To-Do
 
-
-Do not visit my [old website](http://datta-profile.appspot.com/). Some mistakes you make as a kid and regret it for your life. This is one of them... well the other is the long string of numbers in my gmail address.
-Was extremely lazy to fix my website javascript issues and decided to use Jekyll and Hooligan instead. Jekyll
-because it is fairly simple to use and Hooligan because the name is pretty cool.
-
-
+This theme is still unfinished. If you'd like to be added as a contributor, [please fork](http://github.com/plusjade/jekyll-bootstrap)!
+We need to clean up the themes, make theme usage guides with theme-specific markup examples.
 
 
