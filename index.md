@@ -11,8 +11,13 @@ Complete usage and documentation available at: [Jekyll Bootstrap](http://jekyllb
 
 ## How it all started
 
-    ml-class.org
-    hci-class.org
+Through some online courses
+    
+    Sometime in my first year I received a mail in my gmail about three online courses! Machine Learning, HCI and Databases. 
+    For some unknown reason I decided to experiment with ML and HCI! Registered for the two courses.
+    Since then it has been a lot of fun!
+    
+    Currently I am a research assistant at the CNRS lab with the greta team synthesizing laughter as part of the ILHAIRE project. 
 
 The theme should reference these variables whenever needed.
     
