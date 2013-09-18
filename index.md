@@ -5,11 +5,11 @@ tagline: Place for a tagline
 ---
 {% include JB/setup %}
 
-Read [Jekyll Quick Start](http://jekyllbootstrap.com/usage/jekyll-quick-start.html)
+Before anything else this blog is powered by Jekyll. Want to know more?  [Jekyll Quick Start](http://jekyllbootstrap.com/usage/jekyll-quick-start.html)
 
 Complete usage and documentation available at: [Jekyll Bootstrap](http://jekyllbootstrap.com)
 
-## Update Author Attributes
+## How it all started
 
 In `_config.yml` remember to specify your own data:
     
@@ -21,7 +21,7 @@ In `_config.yml` remember to specify your own data:
       github : username
       twitter : username
 
-The theme should reference these variables whenever needed.
+The theme should reference these variables whenever n
     
 ## Sample Posts
 
