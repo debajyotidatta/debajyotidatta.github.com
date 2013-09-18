@@ -5,32 +5,35 @@ tagline: Actually the blog is about other stuff also....
 ---
 {% include JB/setup %}
 
-Read [Jekyll Quick Start](http://jekyllbootstrap.com/usage/jekyll-quick-start.html)
+Before anything else this blog is powered by Jekyll. Want to know more?  [Jekyll Quick Start](http://jekyllbootstrap.com/usage/jekyll-quick-start.html)
 
 Complete usage and documentation available at: [Jekyll Bootstrap](http://jekyllbootstrap.com)
 
-## Update Author Attributes
+## How it all started?
 
-In `_config.yml` remember to specify your own data:
+
     
-    title : My Blog =)
+    Sometime in my first year I received a mail in my gmail about three online courses! Machine Learning, HCI and Databases. Quickly found out that as part of the course we all will be taught about
+    Databases. Registered for the other two courses of Andrew Ng and Scott Klemer! Two of the world's best teachers possibly (Well along with Walter Lewin, he is always in every list of best teachers!)
+    totally convinced me about the awesomeness of these two fields.
     
-    author :
-      name : Name Lastname
-      email : blah@email.test
-      github : username
-      twitter : username
-
-The theme should reference these variables whenever needed.
+    Since then it has been a long jouney! Will write about all that stuff sometime later.
     
-## Sample Posts
+    Currently I am working as a research assistant at CNRS in the [ILHAIRE](http://ilhaire.eu) project. Here I am synthesizing laughter. Yes I am making a virtual agent laugh from a variety of inputs and 
+    from the next week I will be exploring the correlations of human breathing and laughter. 
+    
+    
 
-This blog contains sample posts which help stage pages and blog data.
-When you don't need the samples anymore just delete the `_posts/core-samples` folder.
+This blog is mostly about the stuff I have done and learnt in the last 3 years! 
+    
+## I would love to hear from you!
 
-    $ rm -rf _posts/core-samples
+Actually about anything you want to talk about or share!
+Well you can send me a mail here at `datta24421112 at gmail dot com` but in case you like Mr. Zuckerbergs mode of communication more, reach me out at `/debajyotid' 
 
-Here's a sample "posts list".
+
+
+The post list.
 
 <ul class="posts">
   {% for post in site.posts %}
@@ -38,9 +41,11 @@ Here's a sample "posts list".
   {% endfor %}
 </ul>
 
-## To-Do
 
-This theme is still unfinished. If you'd like to be added as a contributor, [please fork](http://github.com/plusjade/jekyll-bootstrap)!
-We need to clean up the themes, make theme usage guides with theme-specific markup examples.
+
+Do not visit my [old website](http://datta-profile.appspot.com/). I was a kid when I made it and has too many rendering issues. Was extremely lazy to fix them and decided to use Jekyll and Hooligan instead. Jekyll
+because it is fairly simple to use and Hooligan because the name is pretty cool.
+
+
 
 
