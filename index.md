@@ -1,35 +1,32 @@
 ---
 layout: page
 title: Some dirty fieldwork lessons that might help others!!
-tagline: Actually the blog is about other stuff also....
+tagline: Place for a tagline
 ---
 {% include JB/setup %}
 
-Before anything else this blog is powered by Jekyll. Want to know more?  [Jekyll Quick Start](http://jekyllbootstrap.com/usage/jekyll-quick-start.html)
+Read [Jekyll Quick Start](http://jekyllbootstrap.com/usage/jekyll-quick-start.html)
 
 Complete usage and documentation available at: [Jekyll Bootstrap](http://jekyllbootstrap.com)
 
-## How it all started?
+## Update Author Attributes
 
+In `_config.yml` remember to specify your own data:
+    
+    title : My Blog =)
+    
+    author :
+      name : Name Lastname
+      email : blah@email.test
+      github : username
+      twitter : username
 
+The theme should reference these variables whenever needed.
     
-    Sometime in my first year I received a mail in my gmail about three online courses! Machine Learning, HCI and Databases. Quickly found out that as part of the course we all will be taught about
-    Databases. Registered for the other two courses of Andrew Ng and Scott Klemer! Two of the world's best teachers possibly (Well along with Walter Lewin, he is always in every list of best teachers!)
-    totally convinced me about the awesomeness of these two fields.
-    
-    Since then it has been a long jouney! Will write about all that stuff sometime later.
-    
-    Currently I am working as a research assistant at CNRS in the [ILHAIRE](http://ilhaire.eu) project. Here I am synthesizing laughter. Yes I am making a virtual agent laugh from a variety of inputs and 
-    from the next week I will be exploring the correlations of human breathing and laughter. 
-    
-    
+## Sample Posts
 
-This blog is mostly about the stuff I have done and learnt in the last 3 years! 
-    
-## I would love to hear from you!
-
-Actually about anything you want to talk about or share!
-Well you can send me a mail here at `datta24421112 @ ( gmail ) . com` 
+This blog contains sample posts which help stage pages and blog data.
+When you don't need the samples anymore just delete the `_posts/core-samples` folder.
 
     $ rm -rf _posts/core-samples
 
