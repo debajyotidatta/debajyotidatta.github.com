@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Some dirty fieldwork lessons that might help others!!
-tagline: Just about HCI and ML though!
+tagline: Actually the blog is about other stuff also....
 ---
 {% include JB/setup %}
 
