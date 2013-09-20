@@ -9,29 +9,31 @@ Before anything else this blog is powered by Jekyll. Want to know more?  [Jekyll
 
 Complete usage and documentation available at: [Jekyll Bootstrap](http://jekyllbootstrap.com)
 
-## How it all started
+## Well what exactly will I write about in this blog?
 
-Through some online courses
+It is mainly my portfolio site but I will also occasionally write about stuff I feel strongly about! Like the story of "buttons"....
     
-    Sometime in my first year I received a mail in my gmail about three online courses! Machine Learning, HCI and Databases. 
-    For some unknown reason I decided to experiment with ML and HCI! Registered for the two courses.
-    Since then it has been a lot of fun!
+    <iframe width="420" height="315" src="http://www.youtube.com/embed/X5WXaUQtPRs" frameborder="0" allowfullscreen></iframe>
     
-    Currently I am a research assistant at the CNRS lab with the greta team synthesizing laughter as part of the ILHAIRE project. 
+    Well I do not feel so strongly about this button... I kinda like this video! 
 
 
     
-## Some other stuff I have done...
+## Very little about me...
 
 I was a Google Summer of Code Intern in 2012 for Connexions, Rice University on the "Donate Now Campaign" Here is a blog post after the [final evaluations](http://blog.cnx.org/2012/08/google-summer-of-code-2012-comes-to.html).
 I was also the part of Team Plan-B at the CIMA GBC 2012. We were the western zone finalists and also won the best business report at the Western Zone finals.
+
+I am currently a research assistant at CNRS, Telecom ParisTech working on the [ILHAIRE](http://ilhaire.eu) project. Over here I am synthesizing laughter!
+And trying to make it as natural (I mean human-like) as possible!
     
 
-## Some things I wanted to do, but didn't quite work out
-
-This list is fairly big and this is mainly about some ideas I had and I wanted to implement a quick prototype of the same.
-In most cases I abondoned these projects because I had no way of doing subjective evaluations. And without evaluations these projects are pretty useless.
-I will occasionally write about them in separate blog posts and if you have any ideas about reviving them feel free to email me.
+## I reply to everyone... so feel free to drop me a line if you want to know more about any of the stuff I am doing. Or if you have an idea we can work on!
+Well you can contact me two ways:
+    datta24421112 [at] gmail [dot] come
+    and if you prefer Zuckerberg's mode of contact... feel free to get in touch with me at /debajyotid
+    
+In either case I will reply at the earliest!
 
 The "posts list".
 
