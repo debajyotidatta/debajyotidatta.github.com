@@ -12,8 +12,9 @@ Complete usage and documentation available at: [Jekyll Bootstrap](http://jekyllb
 ## Well what exactly will I write about in this blog?
 
 It is mainly my portfolio site but I will also occasionally write about stuff I feel strongly about! Like the story of "buttons"....
+
+{% youtube X5WXaUQtPRs %}    
     
-    <iframe width="420" height="315" src="http://www.youtube.com/embed/X5WXaUQtPRs" frameborder="0" allowfullscreen></iframe>
     
     Well I do not feel so strongly about this button... I kinda like this video! 
 
