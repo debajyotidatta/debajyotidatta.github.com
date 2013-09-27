@@ -13,10 +13,18 @@ Complete usage and documentation available at: [Jekyll Bootstrap](http://jekyllb
 
 It is mainly my portfolio site but I will also occasionally write about stuff I feel strongly about! Like the story of "buttons"....
 
-<iframe width="480" height="360" src="http://www.youtube.com/embed/WO82PoAczTc" frameborder="0"> </iframe>  
+<iframe width="480" height="360" src="http://www.youtube.com/embed/X5WXaUQtPRs" frameborder="0"> </iframe>  
+
+Well on a serious note it talks about a very important concept: The importance of designing products for "humans". It is essential and of crucial importance to design products
+and devices that not only is easy to use but also gives joy to people.
+
+The abundance of bad and/or terrible design of day to day products show how little thought was given to designing products of everyday use.
+I will also occasionally write about good designs... products which bring people joy and make them happy!
+
+Well, welcome to this fascinating world of Human Computer Interaction!
 
 
-## Very little about me...
+## About me...
 
 I was a Google Summer of Code Intern in 2012 for Connexions, Rice University on the "Donate Now Campaign" Here is a blog post after the [final evaluations](http://blog.cnx.org/2012/08/google-summer-of-code-2012-comes-to.html).
 I was also the part of Team Plan-B at the CIMA GBC 2012. We were the western zone finalists and also won the best business report at the Western Zone finals.
