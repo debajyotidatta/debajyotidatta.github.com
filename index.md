@@ -13,24 +13,23 @@ Complete usage and documentation available at: [Jekyll Bootstrap](http://jekyllb
 
 It is mainly my portfolio site but I will also occasionally write about stuff I feel strongly about! Like the story of "buttons"....
 
-{% youtube X5WXaUQtPRs %}    
-    
-    
-    Well I do not feel so strongly about this button... I kinda like this video! 
+<iframe width="480" height="360" src="http://www.youtube.com/embed/WO82PoAczTc" frameborder="0"> </iframe>  
 
 
-    
 ## Very little about me...
 
 I was a Google Summer of Code Intern in 2012 for Connexions, Rice University on the "Donate Now Campaign" Here is a blog post after the [final evaluations](http://blog.cnx.org/2012/08/google-summer-of-code-2012-comes-to.html).
 I was also the part of Team Plan-B at the CIMA GBC 2012. We were the western zone finalists and also won the best business report at the Western Zone finals.
 
 I am currently a research assistant at CNRS, Telecom ParisTech working on the [ILHAIRE](http://ilhaire.eu) project. Over here I am synthesizing laughter!
-And trying to make it as natural (I mean human-like) as possible!
+And trying to make it as natural (rather as human-like) as possible! I am using a variety of approaches for doing this and hopefully by the end of the project we
+will have full body animation of the virtual agent GRETA.
+
+Till now we are done with head, eyebrow, lips, torso and shoulder animation. (Well the torso and shoulder animation bits are still going on.
     
 
-## I reply to everyone... so feel free to drop me a line if you want to know more about any of the stuff I am doing. Or if you have an idea we can work on!
-Well you can contact me two ways:
+## I reply to everyone... so feel free to drop me a line if you want to know more about any of the stuff I am doing. Or if you have an idea that we can work on together!
+Well you can contact in two ways:
     datta24421112 [at] gmail [dot] come
     and if you prefer Zuckerberg's mode of contact... feel free to get in touch with me at /debajyotid
     
