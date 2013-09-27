@@ -28,7 +28,7 @@ will have full body animation of the virtual agent GRETA.
 Till now we are done with head, eyebrow, lips, torso and shoulder animation. (Well the torso and shoulder animation bits are still going on.
     
 
-## I reply to everyone... so feel free to drop me a line if you want to know more about any of the stuff I am doing. Or if you have an idea that we can work on together!
+I reply to everyone... so feel free to drop me a line if you want to know more about any of the stuff I am doing. Or if you have an idea that we can work on together!
 Well you can contact in two ways:
     datta24421112 [at] gmail [dot] come
     and if you prefer Zuckerberg's mode of contact... feel free to get in touch with me at /debajyotid
