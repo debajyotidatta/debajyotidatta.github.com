@@ -30,7 +30,7 @@ I am Debajyoti. I do not hate people who still use "Comic Sans" but I am more fa
 I believe in super heroes and just in case you are thinking about Mahatma Gandhi, K.M Birla you are wrong. I believe in them too but I believe more in the ones from DC Comics like Batman. Well only batman!
 And that by the way has nothing to do with Christopher Nolan movies.
 
-I love the rubik's cube and until recently I had drawn more pictures than written computer programs. I cannot dance, sing or play the cello! And someday I will learn all the three.
+I love the rubik's cube and until recently I had drawn more pictures than written computer programs. I cannot dance, sing or play the cello. And someday I will learn all the three.
 
 I was a Google Summer of Code Intern in 2012 for Connexions, Rice University on the "Donate Now Campaign" Here is a blog post after the [final evaluations](http://blog.cnx.org/2012/08/google-summer-of-code-2012-comes-to.html).
 I was also the part of Team Plan-B at the CIMA GBC 2012. We were the national finalists and also won the best business report at the Western Zone finals. 
