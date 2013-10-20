@@ -15,7 +15,7 @@ It is mainly my portfolio site but I will also occasionally write about stuff I 
 
 <iframe width="480" height="360" src="http://www.youtube.com/embed/X5WXaUQtPRs" frameborder="0"> </iframe>  
 
-Well on a serious note it talks about a very important concept: The importance of designing products for "humans". You must have seen too many posts about how good design and usability;
+Well on a serious note it talks about a very important concept: The importance of designing products for "humans". You must have seen too many posts about good design and usability;
 and that looks are not everything. However this place will only be about the "humans" part of Human Computer Interaction.  
 
 And before you proceed if you have been really stressed about certain things in life and belive that the stress is bad for your health.... then see the ted video below.

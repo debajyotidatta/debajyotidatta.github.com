@@ -38,7 +38,7 @@ difficult challenges into opportunities
 for design."
 
 
-### Doesn't every design have the three stages discover ideate and prototype?
+### Doesn't every design have the three stages: discover, ideate and prototype?
 
 Here comes the next most important part: **Human Centered** Design!
 
