@@ -11,7 +11,7 @@ tagline: and about everything else...
 I am Debajyoti Datta and I work in areas of machine learning and human computer interaction.
 Currently I am a graduate student at University of Virginia, pursuing MSc in Systems and Information Engineering. 
 
-My adviser is [Dr. Laura Barnes] (http://www.sys.virginia.edu/laura-barnes.html).
+My adviser is [Dr. Laura Barnes](http://www.sys.virginia.edu/laura-barnes.html).
 
 ## My research interests:
 
