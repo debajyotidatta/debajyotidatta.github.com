@@ -8,21 +8,26 @@ tagline: and about everything else...
 
 ## About me...
 
-I am Debajyoti and I work in areas of machine learning and human computer interaction...
+I am Debajyoti Datta and I work in areas of machine learning and human computer interaction.
+Currently I am a graduate student at University of Virginia, pursuing MSc in Systems and Information Engineering. 
 
-## What exactly do you work on?
+My adviser is [Dr. Laura Barnes] (http://www.sys.virginia.edu/laura-barnes.html).
 
-I have been working on multimodal interactions and virtual agents. I was a developer in the [ILHAIRE](http://ilhaire.eu) project and currently I am at Carnegie Mellon
-University at the [Articulab](http://www.articulab.justinecassell.com/) working on the Rapport Project. This project focuses on building virtual agents 
-that would build social rapport with the students while working on a linear algebra peer tutoring session. Aprt from these I love explaining new concepts to people,
-playing cricket and of course fiddling around with my rubiks cubes!
+## My research interests:
 
-## How did it all start?
+I have been working on multimodal interactions and virtual agents. 
+Currently I am working on developing Virtual Patients for inter-professional education as part of my masters thesis.
 
-When people appreciate the stuff you make or do, or if the stuff you do suddenly impacts a million people 
-across the globe it all starts making sense! Google Summer of Code 2012 with Connexions and [open-advice](http://open-advice.org/), were the
-first two projects that I was proudly part of! 
+In the past I have been part of the [ILHAIRE](http://ilhaire.eu) project and the Rapport project at the [Articulab](http://www.articulab.justinecassell.com/) at Carnegie Mellon
+University's school of Computer Science. 
 
+Apart from these I love explaining new concepts to people,
+playing cricket and of course fiddling around with my rubiks cubes...
+
+## It started with....
+
+Google Summer of Code 2012 with Connexions and [open-advice](http://open-advice.org/), were the
+first two projects that I was part of during my undergraduate studies at BITS Pilani, K.K Birla Goa Campus.
 
 *************************************************************************************************************
 
