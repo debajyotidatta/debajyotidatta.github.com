@@ -4,6 +4,8 @@ permalink: about/
 profile: true
 ---
 
-This is a static page. It could be an 'about page' if you'd like.
+Hi, I am Debo. Currently a data scientist at x.ai where we are striving to make "Amy" smarter. Learn more about us [here][xdotai]
+
+[xdotai]: https://x.ai/
 
 {% include footer.html %}
