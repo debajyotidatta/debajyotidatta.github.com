@@ -1,8 +1,8 @@
 # Site settings
-title:       Pixyll
-email:       your_email@example.com
-author:      John Otander
-description: "A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff."
+title:       blink
+email:       ddatta1205@gmail.com
+author:      Debajyoti Datta
+description: "Relying heavily on the work of others since 1991"
 baseurl:     ""
 url:         "http://debajyotidatta.github.io/"
 date_format: "%b %-d, %Y"
@@ -29,7 +29,7 @@ enable_anchorjs: false
 # Facebook Page integration
 # (for instant articles and other stuff)
 fb_page: false
-fb_page_id: 
+fb_page_id:
 
 # Disqus post comments
 # (leave blank to disable Disqus)
