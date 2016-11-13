@@ -14,7 +14,7 @@ There are various fantastic posts on word embeddings and the details behind them
 * [Sebastian Ruder's posts on word embeddings](http://sebastianruder.com/word-embeddings-1/)
 * [The actual Word2Vec paper](http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf) and Xin Rong and Yoav Goldberg explained various parameters and details of the paper [here](https://arxiv.org/abs/1411.2738) and [here](https://www.cs.bgu.ac.il/~yoavg/publications/negative-sampling.pdf)
 
-With that said before we jump into code, just a brief overview of word embeddings or word vectors. It essentially is a way to represent words instead of just indices or as bag of words. The reasons for doing so are as follows:
+In this post, we will implement a very simple version of the [fastText](https://arxiv.org/abs/1607.04606) paper on word embeddings. We will build up to this paper using the concepts it uses and eventually the fast text paper. Word Embeddings are a way to represent words as dense vectors instead of just indices or as bag of words. The reasons for doing so are as follows:
 
 When you represent words as indices, the fact that words by themselves have meanings associated with them is not adequately represented.
 
@@ -34,7 +34,7 @@ In the above diagram the words are related to each other in the vector space, th
 
 Now the details of how words embeddings are constructed is where things get really interesting. The key idea behind word2vec is the distributional hypothesis, which essentially refers to the fact the words are characterized by the words they hang out with. This essentially refers to the fact that the word "rose" is more likely to be seen around the word "red" and the word "sky" is more likely to be seen around the word "blue". This part will become clearer through code.
 
-Lets start by using the airbnb dataset. It can be found [here](http://insideairbnb.com/get-the-data.html). Also I did some preprocessing
+Let's start by using the Airbnb dataset. It can be found [here](http://insideairbnb.com/get-the-data.html). Also, I did some preprocessing
 but should be fairly easy to just extract the text field by loading into pandas
 data frame and getting the review column.
 
@@ -46,7 +46,7 @@ data = pd.read_csv('AirbnbData/reviews.csv')
 
 
 
-The data is quite interesting and there is a lot of scope to use it for other
+The data is quite interesting and there is a lot of scopes to use it for other
 purposes but we are only interested in the text column so let's concentrate on
 that. Here is a random example of a review.
 
@@ -65,11 +65,11 @@ data['text'][4]
 <h2>Skip-Gram approach</h2>
 
 The first concept we will go through is skip-gram. Here we want to learn words based on how they occur in the sentence, specifically the words they hang out with. (The distributional hypothesis part that we discussed above.)
-The fifth sentence in the dataset is "I enjoy playing and watching sports and listening to music...all types and all sorts!". In order to create a training dataset for exploiting the distributional hypothesis we will create the training batch which will create the word and context pairs for each of the words. What we want is, for each of the word, the words adjacent to that word to have a higher probability of occuring together and the words away from it, to have a lower probability. (Not quite true, essentially, words that are likely to occur together should have a higher probability than the words that don't.) Eg: In the sentence "Color of the rose is red", here we want to maximize p(red|is) and minimize may be p(green|orange) which is a noisy example.
+The fifth sentence in the dataset is "I enjoy playing and watching sports and listening to music...all types and all sorts!". In order to create a training dataset for exploiting the distributional hypothesis, we will create the training batch which will create the word and context pairs for each of the words. What we want is, for each of the word, the words adjacent to that word to have a higher probability of occurring together and the words away from it, to have a lower probability. (Not quite true, essentially, words that are likely to occur together should have a higher probability than the words that don't.) Eg: In the sentence "Color of the rose is red", here we want to maximize p(red|is) and minimize may be p(green|orange) which is a noisy example.
 
 
 
-The goal is to have dataset, where we can distinguish if a word is present in a context and then mark it positive, else mark the word as negative. Keras has some useful libraries that let's you do that very easily.
+The goal is to have a dataset, where we can distinguish if a word is present in a context and then mark it positive, else mark the word as negative. Keras has some useful libraries that lets you do that very easily.
 
 
 ```python
@@ -86,7 +86,7 @@ from keras.preprocessing.sequence import skipgrams, make_sampling_table
 
 The libraries we need have been imported above.
 
-Just as a quick note, we will randomly sample words from the dataset and create our training data. There is a problem with this though. The more common words will get sampled more frequently than the uncommon ones. For instance the word "the" will be sampled really frequently because they occur often. Since we do not want to sample them that frequently, we will use a sampling table. A sampling table essentially, is the probability of sampling the word i-th most common word in a dataset (more common words should be sampled less frequently, for balance) [From, keras documentation].
+Just as a quick note, we will randomly sample words from the dataset and create our training data. There is a problem with this, though. The more common words will get sampled more frequently than the uncommon ones. For instance the word "the" will be sampled really frequently because they occur often. Since we do not want to sample them that frequently, we will use a sampling table. A sampling table essentially is the probability of sampling the word i-th most common word in a dataset (more common words should be sampled less frequently, for balance) [From, keras documentation].
 
 
 ```python
@@ -154,7 +154,7 @@ Image(model_to_dot(model, show_shapes=True).create(prog='dot', format='png'))
 
 
 
-Just to go through the details of every step, when we did the dot product along the second axis in the Merge layer, we are essentially trying to find the similarity between the two vectors, the context word and the target word. The reason for doing it this way, is because now you can think of contexts in different ways. A context may not be just the words it occurs with, but the characters it contains. The char n-grams can be context. Yes, this is where the fasttext word embeddings come in. More on that later in this post.
+Just to go through the details of every step, when we did the dot product along the second axis in the Merge layer, we are essentially trying to find the similarity between the two vectors, the context word, and the target word. The reason for doing it this way is because now you can think of contexts in different ways. A context may not be just the words it occurs with, but the characters it contains. The char n-grams can be context. Yes, this is where the fasttext word embeddings come in. More on that later in this post.
 
 But let's dive into contexts a bit more and how specific problems can specify contexts differently. Now may be in your task you can define contexts with not just words and characters, but with the shape of the word for instance. Do similarly shaped words tend to have similar meaning? May be "dog" and "cat" both have the shape "char-char-char". Or are they always nouns? pronouns? verbs? But you get the idea.
 
@@ -168,9 +168,9 @@ Now in CBOW the opposite happens, from a given word we try to predict the contex
 
 <h2>Subword Information</h2>
 
-The skipgram approach is effective and useful because it emphasizes on the specific word and the words it generally occurs with. This intuitively makes sense, we expect to see words like "octoberfest, beer, germany" to occur together and words like "france, germany england" to occur together.
+The skipgram approach is effective and useful because it emphasizes on the specific word and the words it generally occurs with. This intuitively makes sense, we expect to see words like "Octoberfest, beer, Germany" to occur together and words like "France, Germany England" to occur together.
 
-But each word also contains information that we want to capture. Like about the relationships of characters and within characters and so on. This is where character based n-grams come in and this is what "subword" information that the fasttext paper refers to.
+But each word also contains information that we want to capture. Like about the relationships between characters and within characters and so on. This is where character-based n-grams come in and this is what "subword" information that the fasttext paper refers to.
 
 So the way fasttext works is just with a new scoring function compared to the skipgram model. The new scoring function is described as follows:
 
@@ -212,7 +212,7 @@ import pandas as pd
     Using TensorFlow backend.
 
 
-The Airbnb reviews dataset can be downloaded from the airbnb data website [here](http://insideairbnb.com/get-the-data.html). The final results should be similar even if you do not use the specific review dataset.
+The Airbnb reviews dataset can be downloaded from the Airbnb data website [here](http://insideairbnb.com/get-the-data.html). The final results should be similar even if you do not use the specific review dataset.
 
 
 ```python
@@ -284,7 +284,7 @@ for k,v in vocab_ngrams.items():
     new_dict[ngrams2Idx[k]] = [ngrams2Idx[j] for j in v]
 ```
 
-Even though we are not using our own layer in Keras, Keras provides an extremely easy way to extend and write one's own layers. Here is an example of how one can add all the rows of a matrix where each of the rows represent each char-ngram to get the overall vector for the entire word. This is the key idea behind the subword information of each word. Each word is essentially the sum of all it's corresponding vectors of it's n-grams.
+Even though we are not using our own layer in Keras, Keras provides an extremely easy way to extend and write one's own layers. Here is an example of how one can add all the rows of a matrix where each of the rows represents each char-ngram to get the overall vector for the entire word. This is the key idea behind the subword information of each word. Each word is essentially the sum of all it's corresponding vectors of it's n-grams.
 
 
 ```python
@@ -300,7 +300,7 @@ class AddRows(Layer):
         return K.sum(x, axis=1)
 ```
 
-Here is the network. Each word can have only certain number of n-grams. Here we are limiting that to 10. Each of these n-grams along with the word are then trained and we get a corresponding vector for each of the word and the ngrams in the word. The n-grams are a superset of the vocabulary. Also because we first created a dictionary of words and then a dictionary of the char n-grams, the word "as" and the bigram "as" in the word "paste" are assigned to different vectors. Finally we add the corresponding vectors of n-grams in each word to get the final representation of the word from the corresponding char n-grams and do a dot product of these two vectors to find the similarity of these two words. Notice that the difference with normal skip-gram in word2vec is just that this time each word also has the information of the corresponding character n-grams. This is the subword information it refers to.
+Here is the network. Each word can have the only certain number of n-grams. Here we are limiting that to 10. Each of these n-grams along with the word is then trained and we get a corresponding vector for each of the word and the ngrams in the word. The n-grams are a superset of the vocabulary. Also because we first created a dictionary of words and then a dictionary of the char n-grams, the word "as" and the bigram "as" in the word "paste" are assigned to different vectors. Finally, we add the corresponding vectors of n-grams in each word to get the final representation of the word from the corresponding char n-grams and do a dot product of these two vectors to find the similarity of these two words. Notice that the difference with normal skip-gram in word2vec is just that this time each word also has the information of the corresponding character n-grams. This is the subword information it refers to.
 
 
 ```python
@@ -343,7 +343,7 @@ display(SVG(model_to_dot(model, show_shapes=True).create(prog='dot', format='svg
 words_and_ngrams_vocab
 ```
 
-Finally we train the network with the various aspects we discussed.
+Finally, we train the network with the various aspects we discussed.
 
 
 ```python
@@ -404,7 +404,7 @@ f.close()
 ```
 
 
-Now that we have the words, let's see how the word vectors did! This is the airbnb reviews dataset, so let's do some exploration on the word vectors we just created.
+Now that we have the words, let's see how the word vectors did! This is the Airbnb reviews dataset, so let's do some exploration on the word vectors we just created.
 
 
 ```python
