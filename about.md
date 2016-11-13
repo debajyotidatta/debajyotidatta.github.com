@@ -5,12 +5,12 @@ permalink: /about/
 tags: about
 ---
 
-I am Debo, (My full name is Debajyoti Datta, and you would pronounce my first name as as they-bo-joe-tee). Currently a data-scientist at x.ai, where we are enabling Amy to magically schedule your meetings.
+I am Debo, (My full name is Debajyoti Datta, and you would pronounce my first name as they-bo-joe-tee). Currently a data-scientist at [x.ai](https://x.ai/), where we are enabling Amy to magically schedule your meetings.
 
 In the past I have worked on various virtual agent projects at University of Virginia as part of my masters and then before that at Carnegie Mellon University
  as a research assistant. If you want to get in touch with me feel free to reach out to me via linkedin or my email address. (datta <just ignore these> 24421112 @ gmail <ignore this part too> .com)
 
- There should be a series of blog posts of neural network architecture and nlp in deep learning in the following months and weeks. If you spot an error feel free to send a pull request or email me.
+ There should be a series of blog posts of neural network architecture and nlp in deep learning in the following months and weeks. If you spot an error feel free to email me or get in touch with me through the [say hello](http://debajyotidatta.github.io/contact/) section.
 
  [LinkedIn](https://www.linkedin.com/in/dedatta)
  [Github](https://github.com/debajyotidatta)
