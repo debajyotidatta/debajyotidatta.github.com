@@ -8,6 +8,15 @@ categories: nlp deep learning word-embeddings
 
 Hey, we will build a convolutional neural network, but we will understand it through images. CNNs are really powerful, and there is a huge body of research that have used CNNs for a variety of tasks. We will understand CNNs through images.
 
+This post relies on a lot of fantastic work that has already been done on convolutions in text,
+and here is a list of papers that delves into the details of most of the content I have described here.
+
+* [Natural Language Processing (almost) from Scratch](https://arxiv.org/abs/1103.0398)
+* [Character-level Convolutional Networks for Text
+Classification](https://papers.nips.cc/paper/5782-character-level-convolutional-networks-for-text-classification.pdf)
+* [Convolutional Neural Networks for Sentence Classification](http://www.aclweb.org/anthology/D14-1181)  
+
+
 Let's start with inputs:
 
 
