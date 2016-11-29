@@ -6,10 +6,12 @@ summary:    Understanding Convolutions in for text classification systems
 categories: nlp deep learning word-embeddings
 ---
 
-Hey, we will build a convolutional neural network, but we will understand it through images. CNNs are really powerful, and there is a huge body of research that have used CNNs for a variety of tasks. We will understand CNNs through images.
+In this post, we will build a Convolutional Neural Network (CNNs), but we will understand it through images. CNNs are really powerful, and there is a huge body of research that have used CNNs for a variety of tasks. CNNs have become widely popular in text classification systems. CNNs help in reduction in computation by exploiting local correlation of the input data.
 
-This post relies on a lot of fantastic work that has already been done on convolutions in text,
-and here is a list of papers that delves into the details of most of the content I have described here.
+A variant of this work essentially describes the approach I took to create a conversational agent as part of my thesis which involved intent classification for a virtual patient training system. [1](http://iva2016.ict.usc.edu/wp-content/uploads/Papers/100110430.pdf), [2](http://search.lib.virginia.edu/catalog/libra-oa:11279).
+
+This post relies on a lot of fantastic work that has already been done on convolutions in the text,
+and here is a list of papers that delve into the details of most of the content I have described here.
 
 * [Natural Language Processing (almost) from Scratch](https://arxiv.org/abs/1103.0398)
 * [Character-level Convolutional Networks for Text
@@ -19,18 +21,17 @@ Classification](https://papers.nips.cc/paper/5782-character-level-convolutional-
 
 Let's start with inputs:
 
-
 ![png](/assets/images/conv.001.png)
 
-So the green boxes represent the words or the characters. And the corresponding blue rows represent the representation of the words or the characters. In case of character convolutions, since the number of characters was around 70, including punctuations, numbers and alphabets, this is generally the one-hot representation. In case of words, the blue boxes generally represent dense vectors. These dense vectors can be pre-trained word embeddings or word vectors trained during training.
+So the green boxes represent the words or the characters depending on your approach. If you are using character based convolutional neural network then it is characters whereas if you are using words as a unit then it is the word based convolution. And the corresponding blue rows represent the representation of the words or the characters. In the case of character based convolutions, since the number of characters was around 70, including punctuations, numbers, and alphabets, this is generally the one-hot representation. In the case of words, the blue boxes generally represent dense vectors. These dense vectors can be pre-trained word embeddings or word vectors trained during training. See my previous blog post about word embeddings [here](http://debajyotidatta.github.io/nlp/deep/learning/word-embeddings/2016/09/28/fast-text-and-skip-gram/).
 
 <!-- <img src="conv/conv.002.png",width=550,height=550> -->
 
 ![png](/assets/images/conv.002.png)
 
-Now as you can see, filters or kernels can be of any length. Here is something interesting. In case of images the width and lenght of the kernel can be any size. But the width of the kernel in case of character and word representations is the dimension of the entire word embedding or the entire character representation. This makes sense, why would we want to convolve with the partial representation of the word? :P
+Now as you can see, filters (also known as kernels) can be of any length. Here the length refers to the number of rows of the filter. In the case of images, the width and length of the kernel can be any size. But the width of the kernel in case of character and word representations is the dimension of the entire word embedding or the entire character representation. Thus the only dimension that matters in the case of convolutions in NLP tasks, is the length of the filter or the size of the filter.
 
-Now the filters need to convolve with the input and produce the output. This part is slightly tricky to understand and varies based on things like stride (How much the filter moves every stage?) and the length of the filter. The output of the convolution operation is directly dependent on these two aspects.
+Now the filters need to convolve with the input and produce the output. Convolve is a fancy term for multiplication with corresponding cells and adding up the sum. This part is slightly tricky to understand and varies based on things like stride (How much the filter moves every stage?) and the length of the filter. The output of the convolution operation is directly dependent on these two aspects. This will become clearer in the following image.
 
 <!-- <img src="conv/conv.003.png",width=300,height=300>
 <img src="conv/conv.004.png",width=300,height=300>
@@ -42,9 +43,9 @@ Now the filters need to convolve with the input and produce the output. This par
 ![png](/assets/images/conv.005.png)
 ![png](/assets/images/conv.006.png)
 
-Now, this is where all the interesting bit happens! The convolution is just the multiplication of the weights in the filters and the corresponding representation of the words or characters. Each of the output of the multiplication is then just summed up and it produces one output, shown with the arrow. Thus if the filter would have moved with a stride of 2, then the number of filter outputs would have been different. If the filter length was different, the convolved output would be different. Convince yourself that the filter of the length 4, when convolved, wil just produce 2 outputs.
+Now, this is where all the interesting bit happens! The convolution is just the multiplication of the weights in the filters and the corresponding representation of the words or characters. Each of the output of the multiplication is then just summed up and it produces one output, shown with the arrow. Thus if the filter would have moved with a stride of 2, then the number of filter outputs would have been different. If the filter length was different, the convolved output would be different. Convince yourself that the filter of the length 4, when convolved, will just produce 2 outputs.
 
-Now the next key part is just like there can be multiple filter lenghts, there can be multiple filters, so there can be a 100 filters of length 2, a hundred filters of length 4 and so on.
+Like multiple filter lengths, there can be multiple filters of the same length. So there can be a 100 filters of length 2, a hundred filters of length 4 and so on.
 
 Each of these will then produce multiple outputs!
 
@@ -52,7 +53,7 @@ Each of these will then produce multiple outputs!
 
 ![png](/assets/images/conv2.006.png)
 
-Now the final stage, max pooling and concatenation and softmax regularization in this layer.
+The final stage comprises of max pooling then concatenation and softmax regularization.
 
 <!-- <img src="conv/conv2.007.png",width=300,height=300> -->
 
@@ -67,20 +68,19 @@ Neural Networks for Sentence Classification", for words. The above is just repli
 
 Let's now dive into the code and explore these features in depth!
 
-Convolutional Neural Networks have become widely popular in text classification systems. Convolutional  Neural Networks help in reduction in computation by exploiting local correlation of the input data. Understanding convolutions through code, will make the process of understanding CNN really easy through code and can thus be used for a variety of other tasks.
+Understanding convolutions through code will make the process of understanding CNN really easy and can thus be used for a variety of other tasks.
 
-So the task we are trying to accomplish here, is too calssify text. Specifically the input to the convolutional network can be words or characters. Here from the sequence of words, in a sentence or from the sequence of characters in a sentence we would want to classify the category of the sentence, like positive or negative and so on.
+The task we are trying to accomplish here is to classify text. Specifically, the input to the convolutional network can be words or characters like we discussed before. Here, from the sequence of words, in a sentence or from the sequence of characters in a sentence we would want to classify the category of the sentence, like positive or negative and so on.
 
-This post assumes familiarity with Keras, but that may not be necessary.
+This post assumes familiarity with Keras, but that may not be necessary if you just want an overview of the architectures.
 
-There are multiple papers we will touch upon in this post:
+The papers we mentioned above, are the ones we will touch upon in this post.
 
-
-Also, this work essentially describes the approach I took to create a conversational agent as part of my thesis. I will instead use the imdb data for the text classification part of the work.
-
+I will use the imdb data for the text classification part of the work instead of the dataset I used for my thesis. The idea and implementation, however, is very similar.
 
 
-So the data we will be exploring are imdb sentiment analysis data, UCI Machine Learning Repository
+
+So the data we will be exploring is the imdb sentiment analysis data, that can be found in the UCI Machine Learning Repository
 [here](<https://archive.ics.uci.edu/ml/datasets/Sentiment+Labelled+Sentences>)
 
 
@@ -463,7 +463,7 @@ len(docs), len(sentiments)
 
 
 
-Now that we have documents of length 1000, and sentiments of length 1000, lets do the NLP part.
+Now that we have documents of length 1000, and sentiments of length 1000, let's do the NLP part.
 
 
 ```python
@@ -494,15 +494,13 @@ indices_char = dict((i, c) for i, c in enumerate(chars))
     ('total chars:', 56)
 
 
-Here we have a total of 57 characters. The datasets used were different in the original comparison.
-
-In the original paper, the number of characters is 70 characters, including 26 english letters, 10 digits, 33 other characters and the new line character. The non-space characters are: <br>
+Here we have a total of 57 characters.  In the original paper, the number of characters was 70, which included 26 English letters, 10 digits, 33 other characters and the new line character. The non-space characters are: <br>
 
 abcdefghijklmnopqrstuvwxyz0123456789 <br>
 
 -,;.!?:’’’/\|_@#$%ˆ&*˜‘+-=<>()[]{}
 
-Now the interesting part. Before the convolutions, we need the data to the neural network to be of a particular format.
+Before the convolutions, we need the data to the neural network to be of a particular format.
 
 The format is as follows:
 
@@ -602,9 +600,9 @@ Now the input data needs to be in the form:
 Number_of_reviews X maxlen
 
 So let's process the data in that format. Here we will use a variation of Yoon Kim's paper.
-Now the imdb data is really small, for these to be very effective. But hopefully, this will be sufficient for you to experiments with your own data sets.
+Now the imdb data is really small, for these to be very effective. But hopefully, this will be sufficient for you to do experiments with your own data sets.
 
-For tokenization, there is a fantastic nlp library that has become popular recently, and we will use that. The reason for doing so, is just that we want to make sure, that we do not have two tokens because of an additional punctuation.
+For tokenization, there is a fantastic NLP library, [Spacy](https://spacy.io/) that has become popular recently, and we will use that. Tokenization the right way is a very important task and can drastically affect the result. For instance, if you just decide to tokenize based on space then the word 'did' will have two representations in 'did!' and 'did'. You can even define custom rules for tokenization based on your dataset. Spacy has a really good example of that [here](https://spacy.io/docs/usage/customizing-tokenizer).  Since the IMDB dataset is a relatively clean one, we will just use the default tokenizer that spacy gives us. Feel free to experiment with the variety of options Spacy provides.
 
 Examples: 'did!' and 'did'
 
@@ -674,7 +672,9 @@ len(vocab)
 
 
 
-At this stage you can go ahead with this vocab, but ideally we would want to get rid of the very infrequent words. So cases where the tokenizer failed, or the emoticons and so on. So let's build a function to get words that have atleast appeared more than once in our vocab. The reason for doing this, instead of selecting the most frequent 500 words, is that there will be a lot of words that get eliminated arbitrarily as soon as we reach the 500 word limit.
+At this stage, you can go ahead with this vocab, but ideally, we would want to get rid of the very infrequent words. So cases where the tokenizer failed, or the emoticons and so on. This is because if someone used the word 'amaaazzziiinggg' or 'Wooooooow' to describe the movie we do not want to create two different tokens for the word 'amazing'. Also, you can define custom rules in Spacy to take these into account. Secondly, another option that is often followed in information retrieval approaches is to get rid of the most frequent words. This is because words like 'the', 'an' and so on occur very frequently and do not add to the meaning. We will ignore this part of the IMDB dataset since it is already really small but the following code snippet will help you get rid of the most frequent and the least frequent words in case you desire so.
+
+So let's build a function to get words that have at least appeared more than once in our vocab. The reason for doing this, instead of selecting the most frequent 500 words, is that there will be a lot of words that get eliminated arbitrarily as soon as we reach the 500-word limit. (A lot of words have very similar counts!)
 
 
 ```python
@@ -731,8 +731,8 @@ train_data.shape
 
 
 The following convolution architecture is very similar to the one proposed by Kim et al.,
-except here we are not using pre trained word embeddings. The addition of pre-trained word
-embeddings should be fairly simple. Here is a nice example, on the keras blog.
+except here we are not using pre-trained word embeddings. The addition of pre-trained word
+embeddings should be fairly simple. [Here](https://blog.keras.io/) is a nice example, on the keras blog.
 
 https://blog.keras.io/
 
@@ -843,10 +843,3 @@ model.fit(train_data, y_train, batch_size=32,
 
 
     <keras.callbacks.History at 0x7f071234ea50>
-
-
-
-
-```python
-
-```
