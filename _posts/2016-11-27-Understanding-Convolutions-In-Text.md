@@ -2,7 +2,7 @@
 layout:     post
 title:      Understanding Convolutions in Text
 date:       2016-11-27 12:31:19
-summary:    Understanding Convolutions in for text classification systems
+summary:    Understanding Convolutions in text classification systems
 categories: nlp deep learning word-embeddings
 ---
 
