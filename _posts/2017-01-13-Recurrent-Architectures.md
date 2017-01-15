@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Recurrent Architectures, Language Modeling
+title:      Recurrent Architectures
 date:       2017-01-13 12:31:19
 summary:    Implementations of various Recurrent Architectures
 categories: nlp deep learning recurrent-architectures
@@ -50,4 +50,4 @@ If with a (*) then it was implemented in [LSTM Network Variants](https://medium.
 
 ### Instructions
 
-See the jupyter notebook [here](https://github.com/debajyotidatta/RecurrentArchitectures/blob/master/Empirical%20Exploration%20of%20Recurrent%20Network%20Architectures.ipynb) 
+See the jupyter notebook [here](https://github.com/debajyotidatta/RecurrentArchitectures/blob/master/Empirical%20Exploration%20of%20Recurrent%20Network%20Architectures.ipynb)
