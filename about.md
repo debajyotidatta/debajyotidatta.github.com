@@ -1,21 +1,96 @@
 ---
 layout: page
-title: About blink
+title: About Debo
 permalink: /about/
 tags: about
 ---
 
-I am Debo, (My full name is Debajyoti Datta, and you would pronounce my first name as they-bo-joe-tee). Currently a data-scientist at [x.ai](https://x.ai/), where we are enabling Amy to magically schedule your meetings.
+![png](/images/img.jpg)
 
-In the past I have worked on various virtual agent projects at University of Virginia as part of my masters and then before that at Carnegie Mellon University
- as a research assistant. If you want to get in touch with me feel free to reach out to me via linkedin or my email address. (datta <just ignore these> 24421112 @ gmail <ignore this part too> .com)
+*When the butterfly refused to fly away. At the American museum of Natural History, NY.*
 
- There should be a series of blog posts of neural network architecture and nlp in deep learning in the following months and weeks. If you spot an error feel free to email me or get in touch with me through the [say hello](http://debajyotidatta.github.io/contact/) section.
+I am a graduate student at the University of Virginia, where I work in the intersection of Machine Learning and healthcare. We work with the school of Psychology and School of Medicine to try and integrate ML developments into their day to day work.
 
- [LinkedIn](https://www.linkedin.com/in/dedatta)
- [Github](https://github.com/debajyotidatta)
+After my MS, I worked at [x.ai](https://x.ai/), where I worked on implementing NLP algorithms into making Amy and Andrew schedule meetings. Then for a year I was at [Crossing Minds](https://crossingminds.com/) working on recommendation systems. Now back at grad school working with the awesome people at University of Virginia at [Sensing Systems for Health Lab](https://faculty.virginia.edu/S2HeLab/index.php)
 
-Also if this blog looks pretty [this amazing guy](http://johnotander.com)
-([@4lpine](https://twitter.com/4lpine)) is responsible for it! Feel free to checkout the [Github repository](https://github.com/johnotander/pixyll) to download it,
-request a feature, report a bug, or contribute. It's free, and open source
-([MIT](http://opensource.org/licenses/MIT)).
+
+<!-- Thanks to the following:
+
+* [BASSCSS](http://basscss.com)
+* [Jekyll](http://jekyllrb.com)
+* [Refills](http://refills.bourbon.io/)
+* [Type Scale](http://type-scale.com/) -->
+<!-- 
+List of contributors:
+
+- Aaron S. Hawley
+- Adam Menges
+- Alex Claman
+- Alex Johnson
+- Alex Touchet
+- Allister Antosik
+- Amin Bandali
+- Anders Nissen
+- Andrea Margiovanni
+- Andreas Niedermair
+- Andrzej Ośmiałowski
+- Anuj More
+- Arvind Chembarpu
+- Assaf Gelber
+- Barry vd. Heuvel
+- Bartek Krzemień
+- Benjamin Sinkula
+- Bennett Rogers
+- Brian Gaid
+- Brian Hurst
+- Chee Yeo
+- Cody Chan
+- Cristian Henrique
+- David Ernst
+- David Moodie
+- Donate Altenburger
+- Eddie Schoute
+- Fernando Mantoan
+- Gurchet Rai
+- Harish Narayanan
+- Jack Platten
+- Jehan Tremback
+- Jiaxi Gu (Isaac)
+- John Otander
+- Jordan Danielewski
+- Josh Buxton
+- Kirill Kulikov
+- Kyle Maxwell
+- Marta Sztybor
+- Martin Wagner
+- Matthew Graybosch
+- Maxim Tsoy
+- Mete Balci
+- Mike Lloyd
+- Mikhail Grachev
+- mindwind
+- Nick Rakochy
+- Nikolay Georgiev
+- Noel Bautista
+- Oliver Hamlet
+- Onur (e0i)
+- Praveer Gupta
+- Rassol (Karmeye)
+- Renato Fialho
+- Ricky Han
+- Roberto Pesando
+- Ryan Jacobs
+- Scott Martin
+- Selim Eren Bekçe
+- Shruti Rijhwani
+- Steef Hegeman
+- Tehmasp Chaudhri
+- Thomas Galvin
+- Timothy Gu
+- Tom Kraak
+- Vishnu Ks
+- Vladislav Arbatov
+- Wilfred Hughes
+- Yaroslav Yadrishnikov
+- Yee Chie Tu
+- Yeou Chien -->
