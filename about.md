@@ -24,7 +24,7 @@ After my MS, I worked at [x.ai](https://x.ai/) on many language understanding ta
 * Nov : [AERA](https://www.aera.net/) 1 session and 2 papers accepted to AERA!
 * Oct : [TADA](https://tada2021.org/) Going to present our work on [language examples at the decision boundary](https://arxiv.org/abs/2010.07212)
 * Sept : [AllenAI Hackathon](https://allennlp-hackathon.apps.allenai.org/) We won the AllenAI Hackathon! Our project used Weak-Supervision to identify errors in the Toxicity Dataset.
-* July : [LOGML SUMMER SCHOOL](https://www.logml.ai/) Excited to attend the LOGML summer school! (Will apply again next year! The most fun I have had in a summer school. Although the acceptance rate was 25% :-( )
+* July : [LOGML SUMMER SCHOOL](https://www.logml.ai/) Attended the LOGML summer school. In our project we showed how probabilistic methods generated better geodesic interpolations than non-probabilistic methods. Implementation of [this paper](https://arxiv.org/abs/1806.04994).
 * April: Will present our work at the [EACL Workshop](https://sig-edu.org/bea/current)
 
 
