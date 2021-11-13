@@ -8,6 +8,7 @@ url:         "http://debajyotidatta.github.io/"
 date_format: "%b %-d, %Y"
 header_pages:
  - about.md
+ - publications.md
  - contact.html
 
 # Google services
