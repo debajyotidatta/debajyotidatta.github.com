@@ -2,7 +2,7 @@
 title:       Machine Learning Musings
 email:       ddatta1205@gmail.com
 author:      Debajyoti Datta
-description: "Relying heavily on the work of others since 1991"
+description: "PhD Student in Differential Geonetry and Tensor Decomposition"
 baseurl:     ""
 url:         "http://debajyotidatta.github.io/"
 date_format: "%b %-d, %Y"
@@ -116,7 +116,7 @@ markdown:     kramdown
 redcarpet:
   extensions: ['smart', 'tables', 'with_toc_data']
 permalink:    pretty
-paginate:     4
+paginate:     10
 sass:
   style: compressed
 plugins:
