@@ -88,7 +88,7 @@ As we discussed above the Fisher metric gives us information about how far an ex
 
 ### So only examples near the decision boundary matter?
 
-Yes and no. Examples near the decision boundary, which we will call difficult examples are the ones that are most fragile to changes. But examples far away from the decision boundary are susceptible to another kind of problem. Sometimes you can change all the positive words and the output labels still do not change. This is also an issue since we expect the movie review to change if all positive words have been changed to negative or viceversa.
+Yes and no. Examples near the decision boundary, which we will call difficult examples are the ones that are most fragile to changes. But examples far away from the decision boundary are susceptible to another kind of problem. Sometimes you can change all the positive words and the output labels still do not change. This is also an issue since we expect the movie review to change if all positive words have been changed to negative or vice versa.
 
 Difficult examples, are examples that are close to the decision boundary. Here very subtle changes make a difference. Like meaningless changes like names of actors change the movie review. Easy examples are the ones that require significant edits to change a movie review. As we will see, in easy examples, even with multiple simultaneous edits movie reviews do not change whereas in difficult examples a single meaningless change flips the classifier prediction.
 
